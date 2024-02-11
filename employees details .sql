@@ -1,0 +1,10 @@
+create database employeedetails;
+use employeedetails;
+create table employees(empid int primary key, empname varchar(55), deptid int not null); 
+insert into employees(empid, empname, deptid)values(101, 'aakash', 1), (102, 'ravi', 2), (103, 'suresh', 3);
+select*from employees;
+update employees set deptid= 4 where empid =102;
+alter table employees add salary decimal(10,2);
+delete from employees where empid = 102;
+truncate table employees;
+drop table employees;
